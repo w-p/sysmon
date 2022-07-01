@@ -1,5 +1,7 @@
+![build](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/release.yml/badge.svg)
+
 # sysmon
-A system tray system monitor, written in Go, tested only on Mac.
+A system tray system monitor, written in Go, only tested on Mac.
 
 #### Build
 ```

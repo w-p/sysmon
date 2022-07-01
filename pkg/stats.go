@@ -13,7 +13,7 @@ import (
 // Stats represents system stats
 type Stats map[string]float64
 
-// Generate produces system stats
+// GenerateStats produces system stats
 func GenerateStats(t time.Duration) Stats {
 	stats := Stats{
 		"cpu":  GetCPU(t),
@@ -48,7 +48,8 @@ func GetRAM() float64 {
 func GetPing(address string) float64 {
 	bytes, err := exec.Command("ping", address, "-c 1").Output()
 	if err != nil {
-		panic("failed to get ping time")
+		// panic("failed to get ping time")
+		return 0.0
 	}
 
 	output := string(bytes)

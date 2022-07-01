@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Build Dependencies
-        run: apt -qq update && apt -yy -qq install make gcc libgtk-3-dev libayatana-appindicator3-dev
+        run: sudo apt -qq update && sudo apt -yy -qq install make gcc libgtk-3-dev libayatana-appindicator3-dev
       - name: Setup
         run: make setup
       - name: Test
